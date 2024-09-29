@@ -17,6 +17,5 @@ python -c "import nltk; nltk.download('punkt')"
 # Execute the contextual_retrieval.py script
 python contextual_retrieval.py
 
-# open the api_key.txt and export the key to the environment
-export OPENAI_API_KEY=$(cat api_key.txt)
+
 

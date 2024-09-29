@@ -5,14 +5,16 @@ import wikipedia
 from tqdm import tqdm
 import nltk
 from nltk.tokenize import sent_tokenize
-
+import os
+from dotenv import load_dotenv
 # Initialize ChromaDB client
 chroma_client = chromadb.Client()
 import os
 
 # Get the OpenAI API key from the environment variable
-openai_api_key = os.environ.get('OPENAI_API_KEY')
 
+load_dotenv()
+openai_api_key= os.getenv('OPENAI_API_KEY')
 if not openai_api_key:
     raise ValueError("OPENAI_API_KEY environment variable is not set")
 
